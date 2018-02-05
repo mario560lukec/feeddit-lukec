@@ -1,0 +1,124 @@
+*{
+	margin:0;
+	padding:0;
+}
+#welcome a{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+}
+#welcome a:hover{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+#logout{
+	margin-top:20px;
+	
+}
+#logoutButton{
+	width:100px;
+	height:30px;
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+}
+#logoutButton:hover{
+	background-color:red;
+}
+.row{
+	text-align:center;
+}
+#next{
+	width:100px;
+	background-color:#42a4f4;
+	color:white;
+	font-size:30px;
+	border:none;
+	border-radius:10px;
+}
+#next:hover{
+	background-color:#5b07d1;
+}
+#back{
+	width:100px;
+	background-color:#42a4f4;
+	color:white;
+	font-size:30px;
+	border:none;
+	border-radius:10px;
+}
+#back:hover{
+	background-color:#5b07d1;
+}
+header{
+	height:100px;
+	background-color:#42a4f4;
+}
+#prazanRed{
+	height:100px;
+}
+.naslov{
+	font-weight:bold;
+	color:#0053a0;
+	font-size:22px;
+}
+.naslov:hover{
+	color:red;
+}
+#clanak1{
+	background-color:#9bbeef;
+}
+#clanak3{
+	background-color:#9bbeef;
+}
+.bodovi{
+	font-weight:bold;
+	color:white;
+	background-color:#5b07d1;
+	font-size:50px;
+	margin-left:8px;
+	margin-top:20px;
+}
+.bodovi p{
+	padding-top:10px;
+}
+.deleteButton{
+	background-color:#5b07d1;
+	width:100px;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+	margin-top:40px;
+}
+#controlButtons{
+	padding-top:20px;
+}
+#home{
+	background-color:red;
+	width:150px;
+	height:30px;
+	color:white;
+	font-weight:bold;
+	border:2px solid black;
+	border-radius:10px;
+	
+}
+#home:hover{
+	background-color:black;
+}
+#filterButton{
+	width:100px;
+	height:20px;
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+}
+#filterButton:hover{
+	background-color:red;
+}

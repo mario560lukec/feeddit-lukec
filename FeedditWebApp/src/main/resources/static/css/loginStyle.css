@@ -1,0 +1,40 @@
+#naslov{
+	color:#42a4f4;
+	font-size:100px;
+	padding-top:5%;
+	padding-bottom:-5%;
+}
+
+body{
+	text-align:center;
+}
+label{
+	margin-top:50px;
+	margin-bottom:50px;
+}
+#loginButton{
+	color:white;
+	font-weight:bold;
+	background-color:#42a4f4;
+	font-size:30px;
+	border-radius:10px;
+	margin-top:30px;
+}
+#loginButton:hover{
+	background-color:#0864af;
+}
+#loginButton:active{
+	font-size:40px;
+}
+#username{
+	margin-bottom:50px;
+	margin-top:20px;
+}
+#error{
+	color:red;
+	
+}
+#loggedOut{
+	padding-bottom:20px;
+}
+

@@ -1,0 +1,163 @@
+*{
+	margin:0;
+	padding:0;
+}
+#welcome a{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+}
+#welcome a:hover{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+#logout{
+	margin-top:20px;
+	
+}
+#logoutButton{
+	width:100px;
+	height:30px;
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+}
+#logoutButton:hover{
+	background-color:red;
+}
+.row{
+	text-align:center;
+}
+header{
+	height:100px;
+	background-color:#42a4f4;
+}
+button a{
+	text-decoration:none;
+}
+#prazanRed{
+	height:100px;
+}
+.bodovi{
+	font-weight:bold;
+	color:white;
+	background-color:#5b07d1;
+	font-size:50px;
+	margin-left:8px;
+	margin-top:20px;
+}
+.bodovi p{
+	padding-top:13px;
+}
+.naslov{
+	font-weight:bold;
+	color:#0053a0;
+	font-size:22px;
+}
+.naslov:hover{
+	color:red;
+}
+#clanak1{
+	background-color:#9bbeef;
+}
+#clanak3{
+	background-color:#9bbeef;
+}
+#controlButtons{
+	padding-top:20px;
+}
+.like{
+	background-color:#01890c;
+	color:white;
+	font-weight:bold;
+	width:20px;
+	height:30px;
+	margin-top:35px;
+	border:none;
+	border-radius:5px;
+}
+.like:hover{
+	background-color:#02d34b;
+}
+.like:active{
+	width:30px;
+}
+.dislike{
+	background-color:#d11908;
+	color:white;
+	font-weight:bold;
+	width:20px;
+	height:30px;
+	border:none;
+	border-radius:5px;
+	margin-left:10px;
+}
+.dislike:hover{
+	background-color:#ed4949;
+}
+.dislike:active{
+	width:30px;
+}
+#newArticle{
+	background-color:#fffa07;
+	font-weight:bold;
+	width:200%;
+	height:30px;
+	margin-bottom:20px;
+	border-color:black;
+	border-radius:10px;
+}
+#newArticle:hover{
+	background-color:#ff8300;
+	font-weight:bold;
+	width:200%;
+	height:30px;
+	margin-bottom:20px;
+	color:white;
+}
+#next{
+	width:100px;
+	background-color:#42a4f4;
+	color:white;
+	font-size:30px;
+	border:none;
+	border-radius:10px;
+}
+#next:hover{
+	background-color:#5b07d1;
+}
+#back{
+	width:100px;
+	background-color:#42a4f4;
+	color:white;
+	font-size:30px;
+	border:none;
+	border-radius:10px;
+}
+#back:hover{
+	background-color:#5b07d1;
+}
+#filterButton{
+	width:100px;
+	height:20px;
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+}
+#filterButton:hover{
+	background-color:red;
+}
+#welcomeButton{
+	background-color:#42a4f4;
+	color:white;
+	border:none;
+}
+#welcomeButton:hover{
+	background-color:#42a4f4;
+	color:black;
+}

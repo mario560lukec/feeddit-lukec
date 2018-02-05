@@ -1,0 +1,87 @@
+*{
+	margin:0;
+	padding:0;
+}
+#welcome a{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+}
+#welcome a:hover{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+#logout{
+	margin-top:20px;
+	
+}
+#logoutButton{
+	width:100px;
+	height:30px;
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+}
+#logoutButton:hover{
+	background-color:red;
+}
+header{
+	height:100px;
+	background-color:#42a4f4;
+}
+button a{
+	text-decoration:none;
+}
+.input{
+	margin-top:20px;
+}
+input{
+	width:100%;
+}
+#opis{
+	text-align:center;
+	height:200px;
+}
+#opis h1{
+	padding-top:30px;
+	color:red;
+}
+.nepromjenjivo{
+	text-align:center;
+	background-color:grey;
+}
+#publish{
+	background-color:#5b07d1;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+	width:100%;
+}
+#publish:hover{
+	background-color:#8f33ea;
+}
+#cancel{
+	background-color:red;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+	width:50%;
+	margin-left:50%;
+}
+#cancel:hover{
+	background-color:#7c0000;
+}
+#welcomeButton{
+	background-color:#42a4f4;
+	color:white;
+	border:none;
+}
+#welcomeButton:hover{
+	background-color:#42a4f4;
+	color:black;
+}

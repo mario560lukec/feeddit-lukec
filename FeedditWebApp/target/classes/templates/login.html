@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+          
+<link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+          
+<link href="../static/css/loginStyle.css"
+          th:href="@{css/loginStyle.css}" rel="stylesheet" media="screen"/>
+
+<head lang="en">
+
+    <title>Feeddit login</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="container">
+	
+		<form th:action="@{/login}"
+			th:object="${account}" method="post">		
+				<h1 id="naslov">Feeddit</h1>
+				<span id="error" th:text="${error}"></span><br/>
+				<span id="loggedOut" color="red" th:text="${loggedOut}"></span><br/>
+				<span id="username">
+					<label> Username : <input height="15" type="text" th:field="*{username}"/> </label>
+				</span><br/>
+				
+				<label> Password : <input type="password" th:field="*{password}"/> </label><br/>
+				<button type="submit" value="login" id="loginButton">Login</button>
+		</form>
+	</div>
+</body>
+</html>

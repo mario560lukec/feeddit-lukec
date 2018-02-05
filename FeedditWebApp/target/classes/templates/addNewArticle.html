@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+          
+<link href="../static/css/newArticle.css"
+          th:href="@{css/newArticle.css}" rel="stylesheet" media="screen"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<head lang="en">
+
+    <title>New article</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-2" id="welcome">
+				<form action="#" method="post" th:action="@{/getUserFromNew}">
+					<button id="welcomeButton" type="submit"><h2>Welcome, <span th:text="${user}"></span></h2></button>
+				</form>
+			</div>
+			<div class="col-sm-7">
+			</div>
+			<div class="col-sm-1" id="logout">
+				<form action="#" method="post" th:action="@{/logoutFromNew}">
+					<input id="logoutButton" name="logout" type="submit" value="Logout"/>
+				</form>
+			</div>
+		</div>
+	</header>
+	<form th:action="@{/addNewArticle}" th:object="${clanak}" method="post">
+	<div class="container">
+		<div class="row" id="opis">
+			<div class="col-sm-12">
+				<h1>Add new article</h1>
+			</div>
+		</div>
+		<div class="row" style="text-align:center;color:red;">
+			<span id="error" th:text="${error}"></span>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<h2>Vote #:</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="nepromjenjivo">
+					<h2>0</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<h2>By user</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="nepromjenjivo">
+					<h2><span th:text="${user}"></span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<h2>Headline:</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="input">
+					<input type="text" th:field="*{naslov}"/> 
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<h2>Link:</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="input">
+					<input type="text" th:field="*{link}"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<h2>Author:</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="input">
+					<input type="text" th:field="*{autor}"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2">
+				<form th:action="@{/addNewArticle}" method="post">
+					<input id="publish" type = "submit" name = "publish" value="Publish"/>
+				</form>
+			</div>
+			<div class="col-sm-4">
+				<div>
+					<form th:action="@{/addNewArticle}" method="post">
+						<input id="cancel" type = "submit" name = "cancel" value="Cancel"/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>

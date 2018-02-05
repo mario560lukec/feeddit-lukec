@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+          
+<link href="../static/css/userArticles.css"
+          th:href="@{css/userArticles.css}" rel="stylesheet" media="screen"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<head lang="en">
+
+    <title>Feeddit home</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-2" id="welcome">
+				<h2 style="color:white;">Welcome, <span th:text="${user}"></span></h2>
+			</div>
+			<div class="col-sm-7">
+			</div>
+			<div class="col-sm-1" id="logout">
+				<form action="#" method="post" th:action="@{/logoutFromUser}">
+					<input id="logoutButton" name="logout" type="submit" value="Logout"/>
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row" id="prazanRed">
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-1">
+				<form action="#" method="post" th:action="@{/backToHome}">
+					<input id="home" name="goToHome" type="submit" value="Home page"/>
+				</form>
+			</div>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-4" id="dropdownForm">
+				<form method="post" th:action="@{/userArticles}">
+					<select id = "dropdown" name = "filter">
+					   <option value = "NONE">Select</option>
+					   <option name="najstarijiPrvo" value = "najstarijiPrvo">Show oldest first</option>
+					   <option name="najnovijiPrvo" value = "najnovijiPrvo">Show newest first</option>
+					   <option name="najpozitivniji" value = "najpozitivniji">Best score first</option>
+					   <option name="najnegativniji" value = "najnegativniji">Lowest score first</option>
+					</select>  
+					<button id="filterButton" type="submit" value="ok">SORT</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<span style="color:red;" id="msg" th:text="${msg}"></span><br/>
+			</div>
+		</div>
+		<p th:if="${clanak1.naslov == null}" style="color:red;text-align:center;">No articles avaliable!</p>
+		<div class="row" id="clanak1" th:if="${clanak1.naslov != null}">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-1">
+				<div class="bodovi">
+					<p th:text="${clanak1.glasovi}" />
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<a style="text-decoration: none;" class="link" th:href="${clanak1.link}" target="blank"> <p class="naslov" th:text="${clanak1.naslov}" ></p> </a><br/>
+				<p th:text="${clanak1.autor}" />
+			</div>
+			<div class="col-sm-1">		
+				<form th:action="@{/userArticles}" method="post">
+					<input class="deleteButton" type = "submit" name = "delete1" value="DELETE"/>
+				</form>
+			</div>
+		</div>	
+		<div class="row" th:if="${clanak2.naslov != null}" >
+			<div class="col-sm-2"></div>
+			<div class="col-sm-1">
+				<div class="bodovi">
+					<p th:text="${clanak2.glasovi}" />
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<a style="text-decoration: none;" class="link" th:href="${clanak2.link}" target="blank"> <p class="naslov" th:text="${clanak2.naslov}" ></p> </a><br/>
+				<p th:text="${clanak2.autor}" />
+			</div>
+			<div class="col-sm-1">
+				<form th:action="@{/userArticles}" method="post">
+					<input class="deleteButton" type = "submit" name = "delete2" value="DELETE"/>
+				</form>
+			</div>
+		</div>	
+		<div class="row" id="clanak3"  th:if="${clanak3.naslov != null}">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-1">
+				<div class="bodovi">
+					<p th:text="${clanak3.glasovi}" />
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<a style="text-decoration: none;" class="link" th:href="${clanak3.link}" target="blank"> <p class="naslov" th:text="${clanak3.naslov}" ></p> </a><br/>
+				<p th:text="${clanak3.autor}" />
+			</div>
+			<div class="col-sm-1">
+				<form th:action="@{/userArticles}" method="post">
+					<input class="deleteButton" type = "submit" name = "delete3" value="DELETE"/>
+				</form>
+			</div>
+		</div>	
+		<div class="row" id="clanak4"  th:if="${clanak4.naslov != null}">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-1">
+				<div class="bodovi">
+					<p th:text="${clanak4.glasovi}" />
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<a style="text-decoration: none;" class="link" th:href="${clanak4.link}" target="blank"> <p class="naslov" th:text="${clanak4.naslov}" ></p> </a><br/>
+				<p th:text="${clanak4.autor}" />
+			</div>
+			<div class="col-sm-1">
+				<form th:action="@{/userArticles}" method="post">
+					<input class="deleteButton" type = "submit" name = "delete4" value="DELETE"/>
+				</form>
+			</div>
+		</div>	
+		
+		<div class="row" id="controlButtons" th:if="${clanak1.naslov != null}">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-1">
+				<form th:action="@{/userArticles}" method="post" th:if="${page} != 1">
+					 <input id="back" type = "submit" name = "left" value="&#8678;"/>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<span th:text="${page}"></span> / <span th:text="${allPages}"></span>
+			</div>
+			<div class="col-sm-1">
+				<form th:action="@{/userArticles}" method="post" th:if="${page} != ${allPages}">
+					<input  th:if="${allPages} != 0" id="next" type = "submit" name = "right" value="&#8680;"/>
+				</form>
+			</div>
+		</div>	
+		
+	</div>
+</body>
+</html>
+		
+		
